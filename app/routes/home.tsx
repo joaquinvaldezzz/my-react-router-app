@@ -1,3 +1,7 @@
+import { Field, FieldError, FieldLabel } from "@/components/ui/field";
+import { Fieldset, FieldsetLegend } from "@/components/ui/fieldset";
+import { Input } from "@/components/ui/input";
+
 const title = "Home";
 const description = "Home page";
 
@@ -17,6 +21,15 @@ export default function Home() {
         magnam, modi, est ut cumque iste, voluptate animi ipsum. Accusamus dolorem eos nesciunt
         labore culpa animi consequatur.
       </p>
+
+      <Fieldset>
+        <FieldsetLegend>Fieldset legend</FieldsetLegend>
+        <Field>
+          <FieldLabel>Email address</FieldLabel>
+          <Input name="email" type="email" required />
+          <FieldError>Please enter a valid email.</FieldError>
+        </Field>
+      </Fieldset>
     </main>
   );
 }
